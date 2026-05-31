@@ -93,7 +93,11 @@ If this tool saves you time or boosts your yield, a tip keeps it maintained.
 | 方式 / Method | 地址 / Address |
 |------|------|
 | 💎 PEARL (PRL) | `prl1pdn82tuhzl7phd2jqrkmhnl5vp9tu03j42w3j9njvlvkj40rgqg0qdv5su4` |
-| 💵 USDT (TRC20) | `在此粘贴你的USDT-TRC20地址 / PASTE-YOUR-USDT-TRC20-ADDRESS` |
+| 💵 USDT (TRC20 / 波场) | `TDEGALprmeuWFzq1caEC8V7A1Wue3sDuWi` |
+| 🟡 USDT/BNB (BEP20 / BSC) | `0x163c3abca95d9c6fd5773d7c807577c724f199f5` |
+
+> ⚠️ 转账请认准对应链:TRC20 走波场(TRON),BEP20 走币安智能链(BSC),勿跨链转账以免丢币。
+> Pick the matching chain — TRC20 on TRON, BEP20 on BSC. Wrong-chain transfers are lost.
 
 <a href="https://www.buymeacoffee.com/"><img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-请我喝咖啡-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="buy me a coffee"></a>
 
