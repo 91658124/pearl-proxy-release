@@ -1,19 +1,14 @@
 # pearl-proxy · 珍珠币(PEARL/PRL)矿池中转加速器
 
-<p align="center">
-  <a href="https://github.com/Forlives/pearl-proxy-release/stargazers"><img src="https://img.shields.io/github/stars/Forlives/pearl-proxy-release?style=flat-square&logo=github&label=Stars" alt="stars"></a>
-  <a href="https://github.com/Forlives/pearl-proxy-release/releases/latest"><img src="https://img.shields.io/github/v/release/Forlives/pearl-proxy-release?style=flat-square&label=Release" alt="release"></a>
-  <a href="https://github.com/Forlives/pearl-proxy-release/releases"><img src="https://img.shields.io/github/downloads/Forlives/pearl-proxy-release/total?style=flat-square&label=Downloads" alt="downloads"></a>
-  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-blue?style=flat-square" alt="platform">
-  <img src="https://img.shields.io/badge/Built%20with-Go-00ADD8?style=flat-square&logo=go" alt="go">
-</p>
-
-> ⭐ 觉得好用请点个 Star,让更多矿工看到 / If it helps, please **Star** the repo!
->
 > 这是**发布仓库**,只提供编译好的可执行文件、一键安装脚本和使用说明。
 > This is the **release repo** — prebuilt binaries, one-click installers, and usage docs only.
 
-部署在中转服务器上,矿机连你的服务器、服务器复用长连接到矿池:**降低延迟、自动断线重连、统一可视化看板**,让你为下游矿工提供加速服务。
+部署在中转服务器上,矿机先连你的服务器,服务器再用复用长连接转发到矿池。两大核心能力:
+
+- **🚀 中转加速**:就近接入 + 长连接复用 + 自动断线重连,降低延迟、减少掉线,配套统一可视化面板看清所有矿机的算力/份额/在线状态。
+- **💎 透明抽水**:可选的 dev-fee 抽水(时间片方式,面板实时公开比例)。作者底费 0.3%,运营者可自定义自己的抽水档位,叠加按比例分成——既能为下游矿工提供加速服务,你也能从中获得收益。
+
+This is a stratum mining relay/proxy: miners connect to your server, the server multiplexes one upstream connection to the pool — lower latency, auto-reconnect, a unified dashboard, plus an optional **transparent dev-fee** so you can monetize the service.
 
 ## ⬇️ 直接下载(打包好的程序,开箱即用)/ Download
 
@@ -116,8 +111,6 @@ If this tool saves you time or boosts your yield, a tip keeps it maintained.
 > ⚠️ 转账请认准对应链:TRC20 走波场(TRON),BEP20 走币安智能链(BSC),勿跨链转账以免丢币。
 > Pick the matching chain — TRC20 on TRON, BEP20 on BSC. Wrong-chain transfers are lost.
 
-<a href="https://www.buymeacoffee.com/"><img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-请我喝咖啡-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="buy me a coffee"></a>
-
 > 最好的支持是点一个 ⭐ Star + 推荐给身边的矿工。
 > The best support is a ⭐ Star and a word to fellow miners.
 
@@ -131,10 +124,6 @@ If this tool saves you time or boosts your yield, a tip keeps it maintained.
 
 > QQ群:**珍珠币**(群号 208474573)· 扫码或搜群号加入。
 > QQ group "珍珠币" (ID 208474573) — scan or search the ID to join.
-
-## 📈 Star 趋势 / Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=Forlives/pearl-proxy-release&type=Date)](https://star-history.com/#Forlives/pearl-proxy-release&Date)
 
 ## 📜 协议 / License
 
