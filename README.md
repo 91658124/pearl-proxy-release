@@ -1,11 +1,11 @@
 # pearl-proxy · 珍珠币(PEARL/PRL)矿池中转加速器
 
 <p align="center">
-  <a href="https://github.com/Forlives/pearl-proxy-release/stargazers"><img src="https://img.shields.io/github/stars/Forlives/pearl-proxy-release?style=flat-square&logo=github&label=Star%20点星" alt="stars"></a>
-  <a href="https://github.com/Forlives/pearl-proxy-release/releases/latest"><img src="https://img.shields.io/github/v/release/Forlives/pearl-proxy-release?style=flat-square&label=最新版本" alt="release"></a>
-  <a href="https://github.com/Forlives/pearl-proxy-release/releases"><img src="https://img.shields.io/github/downloads/Forlives/pearl-proxy-release/total?style=flat-square&label=下载量" alt="downloads"></a>
-  <img src="https://img.shields.io/badge/平台-Windows%20%7C%20Linux-blue?style=flat-square" alt="platform">
-  <img src="https://img.shields.io/badge/语言-Go-00ADD8?style=flat-square&logo=go" alt="go">
+  <a href="https://github.com/Forlives/pearl-proxy-release/stargazers"><img src="https://img.shields.io/github/stars/Forlives/pearl-proxy-release?style=flat-square&logo=github&label=Stars" alt="stars"></a>
+  <a href="https://github.com/Forlives/pearl-proxy-release/releases/latest"><img src="https://img.shields.io/github/v/release/Forlives/pearl-proxy-release?style=flat-square&label=Release" alt="release"></a>
+  <a href="https://github.com/Forlives/pearl-proxy-release/releases"><img src="https://img.shields.io/github/downloads/Forlives/pearl-proxy-release/total?style=flat-square&label=Downloads" alt="downloads"></a>
+  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-blue?style=flat-square" alt="platform">
+  <img src="https://img.shields.io/badge/Built%20with-Go-00ADD8?style=flat-square&logo=go" alt="go">
 </p>
 
 > ⭐ 觉得好用请点个 Star,让更多矿工看到 / If it helps, please **Star** the repo!
@@ -14,6 +14,23 @@
 > This is the **release repo** — prebuilt binaries, one-click installers, and usage docs only.
 
 部署在中转服务器上,矿机连你的服务器、服务器复用长连接到矿池:**降低延迟、自动断线重连、统一可视化看板**,让你为下游矿工提供加速服务。
+
+## ⬇️ 直接下载(打包好的程序,开箱即用)/ Download
+
+> 下面是**编译好的成品程序**,内置 Web 管理面板,下载即用,无需安装环境。
+> Prebuilt binaries with a built-in web dashboard. No runtime needed.
+
+| 系统 / OS | 仓库内直接下载 / In-repo | 说明 |
+|------|------|------|
+| 🪟 Windows 64位 | **[📂 bin/windows/](bin/windows/)** → 双击 `启动.bat` | 程序+配置+一键启动,开箱即用 |
+| 🐧 Linux 64位 | **[📂 bin/linux/](bin/linux/)** → `./start.sh` | 程序+配置+一键启动,开箱即用 |
+| 🔐 校验和 | [SHA256SUMS.txt](https://github.com/Forlives/pearl-proxy-release/releases/latest/download/SHA256SUMS.txt) | 校验文件完整性 |
+
+也可在右侧 **[Releases](https://github.com/Forlives/pearl-proxy-release/releases/latest)** 页下载单文件版本。
+Binaries also live in [`bin/`](bin/) right inside this repo — clone and run, nothing to compile.
+
+**运行后**:浏览器打开 `http://你的服务器IP:8080` 进入 **Web 管理面板**(默认账号 admin),矿机指向 `你的服务器IP:3333` 即可。
+After launch, open `http://YOUR_IP:8080` for the **web dashboard**, point miners to `YOUR_IP:3333`.
 
 ## ✨ 特性 / Features
 

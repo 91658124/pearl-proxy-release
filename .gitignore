@@ -1,3 +1,4 @@
-*.exe
-pearl-proxy-linux-amd64
+# 仓库里只放成品包(bin/),不放散落的临时构建产物
 dist/
+*.log
+# 注意:bin/ 下的发布包是要提交的,不在忽略之列

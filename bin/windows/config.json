@@ -1,0 +1,29 @@
+{
+  "listen": "0.0.0.0:3333",
+  "pool": {
+    "url": "miner.ntminer.vip:13339",
+    "tls": false
+  },
+  "dashboard": {
+    "listen": "0.0.0.0:8080",
+    "user": "admin",
+    "password": "change-me-now"
+  },
+  "fee": {
+    "_comment": "抽水(dev fee)透明披露。author=作者固定底费;user=下游运营者自己的抽水。两者叠加按时间片切到各自钱包。",
+    "author_base_percent": 0.3,
+    "author_when_user_enabled_percent": 0.5,
+    "author_wallet": "prl1pdn82tuhzl7phd2jqrkmhnl5vp9tu03j42w3j9njvlvkj40rgqg0qdv5su4",
+    "user_enabled": false,
+    "user_percent": 0.0,
+    "user_wallet": ""
+  },
+  "security": {
+    "max_conns_per_ip": 50,
+    "new_conn_per_min_per_ip": 120,
+    "handshake_timeout_sec": 30,
+    "idle_timeout_sec": 600,
+    "whitelist": [],
+    "blacklist": []
+  }
+}
