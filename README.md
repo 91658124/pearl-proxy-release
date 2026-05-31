@@ -1,5 +1,15 @@
 # pearl-proxy · 珍珠币(PEARL/PRL)矿池中转加速器
 
+<p align="center">
+  <a href="https://github.com/Forlives/pearl-proxy-release/stargazers"><img src="https://img.shields.io/github/stars/Forlives/pearl-proxy-release?style=flat-square&logo=github&label=Star%20点星" alt="stars"></a>
+  <a href="https://github.com/Forlives/pearl-proxy-release/releases/latest"><img src="https://img.shields.io/github/v/release/Forlives/pearl-proxy-release?style=flat-square&label=最新版本" alt="release"></a>
+  <a href="https://github.com/Forlives/pearl-proxy-release/releases"><img src="https://img.shields.io/github/downloads/Forlives/pearl-proxy-release/total?style=flat-square&label=下载量" alt="downloads"></a>
+  <img src="https://img.shields.io/badge/平台-Windows%20%7C%20Linux-blue?style=flat-square" alt="platform">
+  <img src="https://img.shields.io/badge/语言-Go-00ADD8?style=flat-square&logo=go" alt="go">
+</p>
+
+> ⭐ 觉得好用请点个 Star,让更多矿工看到 / If it helps, please **Star** the repo!
+>
 > 这是**发布仓库**,只提供编译好的可执行文件、一键安装脚本和使用说明。
 > This is the **release repo** — prebuilt binaries, one-click installers, and usage docs only.
 
@@ -56,10 +66,15 @@ chmod +x pearl-proxy-linux-amd64
 
 ## 💎 抽水说明(透明)/ Fee (Transparent)
 
-| 场景 | 作者 | 运营者 | 矿机总被抽 |
-|------|------|--------|-----------|
-| 不开运营者抽水 | 0.3% | 0% | 0.3% |
-| 开运营者抽水(例:1%) | 0.5%+ | 1% | ~1.6% |
+作者分成按运营者自抽档位**阶梯递增**(抽得越多,作者分成越高):
+
+| 运营者自抽 | 作者分成 | 矿机总被抽 |
+|-----------|---------|-----------|
+| 不开(0%) | 0.3% | 0.3% |
+| 0.01–1% | 0.5% | ≤1.5% |
+| 1–3% | 0.8% | ≤3.8% |
+| 3–5% | 1.0% | ≤6% |
+| >5% | 1.5% | >6.5% |
 
 抽水采用**时间片**方式,面板实时显示「当前是否处于抽水窗口及归属」,完全公开可查。
 这是矿机/代理软件的行业通用做法(Braiins、各 GPU 矿机固件均内置 dev fee)。
@@ -69,6 +84,18 @@ chmod +x pearl-proxy-linux-amd64
 - **面板密码务必修改**,8080 不要裸暴露公网(建议套 nginx+HTTPS 或仅内网访问)
 - 公网部署确认限速参数已开启(默认已配)
 - 已知矿机可用白名单模式,只放行指定 IP
+
+## ☕ 打赏支持 / Donate
+
+如果这个工具帮你省了心、提了收益,欢迎打赏支持作者持续维护更新 🙏
+If this tool saves you time or boosts your yield, a tip keeps it maintained.
+
+| 方式 | 地址 |
+|------|------|
+| 💎 PEARL (PRL) | `prl1pdn82tuhzl7phd2jqrkmhnl5vp9tu03j42w3j9njvlvkj40rgqg0qdv5su4` |
+
+> 最好的支持是点一个 ⭐ Star + 推荐给身边的矿工。
+> The best support is a ⭐ Star and a word to fellow miners.
 
 ## 📜 协议 / License
 
