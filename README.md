@@ -90,12 +90,30 @@ chmod +x pearl-proxy-linux-amd64
 如果这个工具帮你省了心、提了收益,欢迎打赏支持作者持续维护更新 🙏
 If this tool saves you time or boosts your yield, a tip keeps it maintained.
 
-| 方式 | 地址 |
+| 方式 / Method | 地址 / Address |
 |------|------|
 | 💎 PEARL (PRL) | `prl1pdn82tuhzl7phd2jqrkmhnl5vp9tu03j42w3j9njvlvkj40rgqg0qdv5su4` |
+| 💵 USDT (TRC20) | `在此粘贴你的USDT-TRC20地址 / PASTE-YOUR-USDT-TRC20-ADDRESS` |
+
+<a href="https://www.buymeacoffee.com/"><img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-请我喝咖啡-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="buy me a coffee"></a>
 
 > 最好的支持是点一个 ⭐ Star + 推荐给身边的矿工。
 > The best support is a ⭐ Star and a word to fellow miners.
+
+## 💬 交流群 / Community
+
+遇到问题、想交流配置和收益,欢迎扫码进群 / Scan to join the group:
+
+<p align="center">
+  <img src="assets/group-qr.jpg" width="220" alt="交流群二维码 / group QR">
+</p>
+
+> QQ群:**珍珠币**(群号 208474573)· 扫码或搜群号加入。
+> QQ group "珍珠币" (ID 208474573) — scan or search the ID to join.
+
+## 📈 Star 趋势 / Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Forlives/pearl-proxy-release&type=Date)](https://star-history.com/#Forlives/pearl-proxy-release&Date)
 
 ## 📜 协议 / License
 
