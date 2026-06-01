@@ -142,9 +142,9 @@ chmod +x pearl-proxy-linux-amd64
 
 <a href="https://star-history.com/#Forlives/pearl-proxy-release&Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Forlives/pearl-proxy-release&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Forlives/pearl-proxy-release&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Forlives/pearl-proxy-release&type=Date" width="600" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Forlives/pearl-proxy-release/main/assets/star-history-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Forlives/pearl-proxy-release/main/assets/star-history-light.svg" />
+    <img alt="Star History Chart" src="https://raw.githubusercontent.com/Forlives/pearl-proxy-release/main/assets/star-history-light.svg" width="600" />
   </picture>
 </a>
 

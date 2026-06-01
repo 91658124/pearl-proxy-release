@@ -139,7 +139,7 @@ Got questions, or want to compare configs and yields? Scan to join the group:
 
 ## 📈 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Forlives/pearl-proxy-release&type=Date)](https://star-history.com/#Forlives/pearl-proxy-release&Date)
+[![Star History Chart](https://raw.githubusercontent.com/Forlives/pearl-proxy-release/main/assets/star-history-light.svg)](https://star-history.com/#Forlives/pearl-proxy-release&Date)
 
 ---
 
