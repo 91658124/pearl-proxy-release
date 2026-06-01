@@ -39,6 +39,9 @@ read -rp "矿机接入端口 Listen port [3333]: " LPORT
 LPORT=${LPORT:-3333}
 read -rp "面板端口 Dashboard port [8080]: " DPORT
 DPORT=${DPORT:-8080}
+read -rp "面板是否仅本机访问 Bind dashboard to localhost only? [Y/n]: " DLOCAL
+DLOCAL=${DLOCAL:-Y}
+if [ "$DLOCAL" = "n" ] || [ "$DLOCAL" = "N" ]; then DHOST="0.0.0.0"; else DHOST="127.0.0.1"; fi
 read -rp "面板用户名 Dashboard user [admin]: " DUSER
 DUSER=${DUSER:-admin}
 read -rsp "面板密码 Dashboard password (必填/required): " DPASS; echo ""
@@ -49,11 +52,9 @@ cat > "$INSTALL_DIR/config.json" <<EOF
 {
   "listen": "0.0.0.0:${LPORT}",
   "pool": { "url": "${POOL}", "tls": false },
-  "dashboard": { "listen": "0.0.0.0:${DPORT}", "user": "${DUSER}", "password": "${DPASS}" },
+  "dashboard": { "listen": "${DHOST}:${DPORT}", "user": "${DUSER}", "password": "${DPASS}" },
   "fee": {
-    "author_base_percent": 0.3,
-    "author_when_user_enabled_percent": 0.5,
-    "author_wallet": "prl1pdn82tuhzl7phd2jqrkmhnl5vp9tu03j42w3j9njvlvkj40rgqg0qdv5su4",
+    "_comment": "作者底费 0.3% 已内置二进制且固定;下面是你(运营者)可选的自抽水,默认关闭",
     "user_enabled": false,
     "user_percent": 0.0,
     "user_wallet": ""
@@ -98,10 +99,13 @@ if systemctl is-active --quiet pearl-proxy; then
   echo ""
   say "安装完成,已开机自启 / Installed & enabled on boot ✅"
   echo "  矿机连接 / Point miners to : stratum+tcp://${IP:-<服务器IP>}:${LPORT}"
-  echo "  控制面板 / Dashboard       : http://${IP:-<服务器IP>}:${DPORT}  (${DUSER})"
+  echo "  控制面板 / Dashboard       : http://${DHOST}:${DPORT}  (${DUSER})"
   echo "  查看日志 / Logs            : journalctl -u pearl-proxy -f"
   echo "  停止服务 / Stop            : systemctl stop pearl-proxy"
-  warn "请放行防火墙端口 / Open firewall ports: ${LPORT}, ${DPORT}"
+  warn "请在防火墙/安全组放行矿机端口 / Open miner port: ${LPORT}"
+  if [ "$DHOST" = "127.0.0.1" ]; then
+    warn "面板仅本机可访问,远程查看请用 SSH 隧道 / Dashboard is localhost-only; use SSH tunnel: ssh -L ${DPORT}:127.0.0.1:${DPORT} root@${IP:-<服务器IP>}"
+  fi
 else
   die "服务启动失败,查看 / Service failed: journalctl -u pearl-proxy -n 30"
 fi

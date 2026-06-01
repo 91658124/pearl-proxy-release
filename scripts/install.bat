@@ -57,10 +57,8 @@ if exist "%INSTALL_DIR%\config.json" (
 REM ---- 写配置文件 / write config (用PowerShell写UTF-8,避免bat转义坑) ----
 powershell -Command ^
  "$c = @{ listen='0.0.0.0:%LPORT%'; pool=@{url='%POOL%';tls=$false};" ^
- " dashboard=@{listen='0.0.0.0:%DPORT%';user='%DUSER%';password='%DPASS%'};" ^
- " fee=@{author_base_percent=0.3; author_when_user_enabled_percent=0.5;" ^
- "  author_wallet='prl1pdn82tuhzl7phd2jqrkmhnl5vp9tu03j42w3j9njvlvkj40rgqg0qdv5su4';" ^
- "  user_enabled=$false; user_percent=0.0; user_wallet=''};" ^
+ " dashboard=@{listen='127.0.0.1:%DPORT%';user='%DUSER%';password='%DPASS%'};" ^
+ " fee=@{user_enabled=$false; user_percent=0.0; user_wallet=''};" ^
  " security=@{max_conns_per_ip=50; new_conn_per_min_per_ip=120;" ^
  "  handshake_timeout_sec=30; idle_timeout_sec=600; whitelist=@(); blacklist=@()} };" ^
  " $c | ConvertTo-Json -Depth 6 | Set-Content -Encoding UTF8 '%INSTALL_DIR%\config.json'"
@@ -78,10 +76,10 @@ echo ============================================================
 echo   安装完成 / Installed  ✅
 echo ============================================================
 echo   矿机连接 / Point miners to : stratum+tcp://本机IP:%LPORT%
-echo   控制面板 / Dashboard       : http://本机IP:%DPORT%   (%DUSER%)
+echo   控制面板 / Dashboard       : http://127.0.0.1:%DPORT%   (%DUSER%)  仅本机/localhost-only
 echo   停止 / Stop                : 任务管理器结束 pearl-proxy.exe
 echo.
-echo [注意/NOTE] 请在防火墙放行端口 / Open firewall ports: %LPORT%, %DPORT%
-echo [注意/NOTE] 想开机自启可把本窗口的启动命令加入计划任务。
+echo [注意/NOTE] 请在防火墙/安全组放行矿机端口 / Open miner port: %LPORT%
+echo [注意/NOTE] 面板仅本机可访问;想开机自启可把启动命令加入计划任务。
 echo.
 pause

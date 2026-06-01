@@ -15,15 +15,14 @@ Deploy it on a relay server: miners connect to your server, and the server multi
 
 > These are **prebuilt binaries** with a built-in web dashboard. No runtime needed.
 
-| OS | In-repo download | Notes |
+| OS | Download | Notes |
 |------|------|------|
-| 🪟 Windows 64-bit | **[📂 bin/windows/](bin/windows/)** → double-click `启动.bat` | binary + config + launcher, ready to run |
-| 🐧 Linux 64-bit | **[📂 bin/linux/](bin/linux/)** → run `./start.sh` | binary + config + launcher, ready to run |
-| 🔐 Checksums | [SHA256SUMS.txt](https://github.com/Forlives/pearl-proxy-release/releases/latest/download/SHA256SUMS.txt) | verify file integrity |
+| 🐧 Linux 64-bit | One-liner: `curl -fsSL https://github.com/Forlives/pearl-proxy-release/releases/latest/download/install.sh \| sudo bash` | auto-download + systemd autostart |
+| 🪟 Windows 64-bit | [Releases](https://github.com/Forlives/pearl-proxy-release/releases/latest): grab `pearl-proxy-windows-amd64.exe` + `config.example.json` + `start-windows.bat`, double-click the bat | ready to run |
 
-You can also grab single-file builds from the **[Releases](https://github.com/Forlives/pearl-proxy-release/releases/latest)** page. Binaries also live right inside this repo under [`bin/`](bin/) — clone and run, nothing to compile.
+All prebuilt binaries are on the **[Releases](https://github.com/Forlives/pearl-proxy-release/releases/latest)** page — nothing to compile. Binaries are obfuscated + packed; the 0.3% author base fee is baked in and fixed.
 
-**After launch**: open `http://YOUR_SERVER_IP:8080` for the **web dashboard** (default user `admin`), and point miners to `YOUR_SERVER_IP:3333`.
+**After launch**: dashboard binds to `http://127.0.0.1:8080` by default (use an SSH tunnel for remote access). Point miners to `YOUR_SERVER_IP:3333`.
 
 ---
 
@@ -59,7 +58,7 @@ The script downloads the binary, generates config interactively, installs a syst
 
 ## 🖥️ Manual Run
 
-Enter the matching platform folder under [`bin/`](bin/), or download a binary from [Releases](../../releases/latest):
+Download the platform binary + `config.example.json` from [Releases](../../releases/latest):
 
 | Platform | File |
 |------|------|

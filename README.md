@@ -15,15 +15,14 @@
 
 > 以下是**编译好的成品程序**,内置 Web 管理面板,下载即用,无需安装任何运行环境。
 
-| 系统 | 仓库内直接下载 | 说明 |
+| 系统 | 下载 | 说明 |
 |------|------|------|
-| 🪟 Windows 64 位 | **[📂 bin/windows/](bin/windows/)** → 双击 `启动.bat` | 程序 + 配置 + 一键启动,开箱即用 |
-| 🐧 Linux 64 位 | **[📂 bin/linux/](bin/linux/)** → 运行 `./start.sh` | 程序 + 配置 + 一键启动,开箱即用 |
-| 🔐 校验和 | [SHA256SUMS.txt](https://github.com/Forlives/pearl-proxy-release/releases/latest/download/SHA256SUMS.txt) | 校验文件完整性 |
+| 🐧 Linux 64 位 | 一键: `curl -fsSL https://github.com/Forlives/pearl-proxy-release/releases/latest/download/install.sh \| sudo bash` | 自动下载 + systemd 开机自启 |
+| 🪟 Windows 64 位 | [Releases](https://github.com/Forlives/pearl-proxy-release/releases/latest) 下载 `pearl-proxy-windows-amd64.exe` + `config.example.json` + `start-windows.bat`,双击 bat | 开箱即用 |
 
-也可在右侧 **[Releases](https://github.com/Forlives/pearl-proxy-release/releases/latest)** 页下载单文件版本。仓库 [`bin/`](bin/) 目录里就有打包好的程序,clone 下来即可运行,无需编译。
+所有成品程序都在 **[Releases](https://github.com/Forlives/pearl-proxy-release/releases/latest)** 页,无需编译。二进制经过混淆加壳,作者底费 0.3% 已内置固定。
 
-**运行后**:浏览器打开 `http://你的服务器IP:8080` 进入 **Web 管理面板**(默认账号 admin),矿机指向 `你的服务器IP:3333` 即可。
+**运行后**:面板默认仅本机访问 `http://127.0.0.1:8080`(远程查看用 SSH 隧道),矿机指向 `你的服务器IP:3333` 即可。
 
 ---
 
@@ -59,7 +58,7 @@ sudo bash install.sh
 
 ## 🖥️ 手动运行
 
-进入 [`bin/`](bin/) 对应平台目录,或从 [Releases](../../releases/latest) 下载二进制:
+从 [Releases](../../releases/latest) 下载对应平台二进制 + `config.example.json`:
 
 | 平台 | 文件 |
 |------|------|
