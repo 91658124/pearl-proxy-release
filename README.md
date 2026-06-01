@@ -37,22 +37,23 @@
 
 ---
 
-## 📦 一键安装
+## 📦 一键安装(交互式)
 
-### Linux
+复制下面一行命令,按提示填矿池地址、端口、面板密码,即可自动下载、配置、启动(Linux 还会装 systemd 守护、开机自启)。
+
+### 🐧 Linux
 
 ```bash
-curl -fsSL https://github.com/Forlives/pearl-proxy-release/raw/main/scripts/install.sh -o install.sh
-sudo bash install.sh
+bash <(curl -fsSL https://raw.githubusercontent.com/Forlives/pearl-proxy-release/main/scripts/install.sh)
 ```
 
-脚本会自动下载二进制、交互式生成配置、安装 systemd 服务并设为开机自启。
+### 🪟 Windows(PowerShell)
 
-### Windows
+```powershell
+irm https://raw.githubusercontent.com/Forlives/pearl-proxy-release/main/scripts/install.ps1 | iex
+```
 
-1. 下载 [scripts/install.bat](scripts/install.bat)
-2. **右键 → 以管理员身份运行**
-3. 按提示填写矿池地址、端口、面板密码即可
+> 全程中文交互:依次询问安装目录、矿池地址、面板端口与密码、是否开启你自己的抽水,最后可一键启动。
 
 ---
 
@@ -137,7 +138,13 @@ chmod +x pearl-proxy-linux-amd64
 
 ## 📈 Star 趋势
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Forlives/pearl-proxy-release&type=Date)](https://star-history.com/#Forlives/pearl-proxy-release&Date)
+<a href="https://star-history.com/#Forlives/pearl-proxy-release&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Forlives/pearl-proxy-release&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Forlives/pearl-proxy-release&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Forlives/pearl-proxy-release&type=Date" width="600" />
+  </picture>
+</a>
 
 ---
 
