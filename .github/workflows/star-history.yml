@@ -1,0 +1,38 @@
+name: Refresh Star History Chart
+
+on:
+  schedule:
+    - cron: '17 3 * * *'   # 每天 UTC 03:17 跑一次
+  workflow_dispatch: {}      # 也可手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch latest star-history SVGs
+        run: |
+          mkdir -p assets
+          REPO="Forlives/pearl-proxy-release"
+          curl -fsSL "https://api.star-history.com/svg?repos=${REPO}&type=Date" \
+            -o assets/star-history-light.svg
+          curl -fsSL "https://api.star-history.com/svg?repos=${REPO}&type=Date&theme=dark" \
+            -o assets/star-history-dark.svg
+          echo "light size: $(stat -c%s assets/star-history-light.svg)"
+          echo "dark  size: $(stat -c%s assets/star-history-dark.svg)"
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- assets/; then
+            echo "No change in star chart."
+          else
+            git add assets/star-history-light.svg assets/star-history-dark.svg
+            git commit -m "chore: auto-refresh star history chart [skip ci]"
+            git push
+          fi
