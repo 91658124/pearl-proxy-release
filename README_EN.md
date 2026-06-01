@@ -97,6 +97,8 @@ The author's share **scales up by the operator's own fee tier** (the more the op
 
 The fee uses a **time-slice** approach; the dashboard shows in real time whether the current window is a fee window and who it belongs to — fully auditable. This is standard practice for mining/proxy software (Braiins and most GPU miner firmware ship a built-in dev fee).
 
+> 🔗 **Author's public test node**: `stratum+tcp://pool.cf.edu.kg:3333` — connect and try it directly. This node charges a **1% service fee** (author maintenance fee, disclosed live on the dashboard), independent of the "0.3% base fee when self-hosting" in the table above — self-hosting still starts at 0.3%.
+
 ---
 
 ## ⚠️ Security
