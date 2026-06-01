@@ -140,7 +140,7 @@ chmod +x pearl-proxy-linux-amd64
 
 ## 📈 Star 趋势
 
-<a href="https://star-history.com/#Forlives/pearl-proxy-release&Date">
+<a href="https://www.star-history.com/?type=date&repos=Forlives%2Fpearl-proxy-release">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Forlives/pearl-proxy-release/main/assets/star-history-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Forlives/pearl-proxy-release/main/assets/star-history-light.svg" />
